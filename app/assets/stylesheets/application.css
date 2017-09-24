@@ -1,0 +1,42 @@
+ body {
+ 	text-align: center;
+ 	font-family: sans-serif;
+
+ }
+
+ .meal, .main_ingr, .sec_ingr, .health, .cuisine {
+ 	height: 200px;
+ }
+
+ button {
+ 	width: 100px;
+ 	height: 50px;
+ 	background-color: transparent;
+ 	border: 1px solid black;
+ 	margin: 10px;
+ 	outline: none;
+ }
+
+ button:hover {
+ 	background-color: aqua;
+ 	cursor: pointer;
+ }
+
+ input {
+ 	font-size: 20px;
+ 	text-align: center;
+ 	height: 25px;
+ 	width: 250px;
+ 	outline: none;
+ 	padding: 5px;
+ 	border: 1px solid rgba(0, 0, 0, 0.3);
+ 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+ }
+
+ ul {
+ 	padding: 0;
+ }
+
+ li {
+ 	list-style-type: none;
+ }
