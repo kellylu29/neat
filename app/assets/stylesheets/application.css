@@ -1,42 +1,40 @@
- body {
- 	text-align: center;
- 	font-family: sans-serif;
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+ nav {
+  text-align: left;
+   width: 100%;
+   margin: 0;
+ }
+
+ nav a {
+   display: inline-block;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 16px;
+   padding-bottom: 16px;
 
  }
 
- .meal, .main_ingr, .sec_ingr, .health, .cuisine {
- 	height: 200px;
- }
-
- button {
- 	width: 100px;
- 	height: 50px;
- 	background-color: transparent;
- 	border: 1px solid black;
- 	margin: 10px;
- 	outline: none;
- }
-
- button:hover {
- 	background-color: aqua;
- 	cursor: pointer;
- }
-
- input {
- 	font-size: 20px;
- 	text-align: center;
- 	height: 25px;
- 	width: 250px;
- 	outline: none;
- 	padding: 5px;
- 	border: 1px solid rgba(0, 0, 0, 0.3);
- 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
- }
-
- ul {
- 	padding: 0;
- }
-
- li {
- 	list-style-type: none;
+ nav a:hover {
+   background-color: aqua;
  }

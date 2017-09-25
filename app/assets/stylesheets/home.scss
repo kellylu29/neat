@@ -1,3 +1,81 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#pinContainer {
+  width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.panel {
+  height: 100%;
+	width: 100%;
+	position: absolute;
+  font-size: 50px;
+  text-align: center;
+  padding: 0;
+}
+
+.one {
+  background-color: pink;
+}
+
+.two {
+  background-color: yellow;
+}
+
+.three {
+  background-color: red;
+}
+
+.four {
+  background-color: aqua;
+}
+
+.five {
+  background-color: green;
+}
+
+// .p-one, .p-two, .p-three, .p-four, .p-five {
+//   position: relative;
+//   top: 50%;
+//   -webkit-transform: translateY(-50%);
+//   -ms-transform: translateY(-50%);
+//   transform: translateY(-50%);
+// }
+
+button {
+ width: 100px;
+ height: 50px;
+ background-color: transparent;
+ border: 1px solid black;
+ margin: 10px;
+ outline: none;
+}
+
+button:hover {
+ background-color: aqua;
+ cursor: pointer;
+}
+
+.input {
+  background-color: transparent;
+  font-size: 20px;
+  text-align: center;
+  height: 25px;
+  width: 250px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-bottom: 5px solid black;
+  // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+ padding: 0;
+}
+
+li {
+ list-style-type: none;
+}

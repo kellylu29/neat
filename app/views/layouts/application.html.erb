@@ -5,25 +5,27 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <% if current_user %>
-        <li>
-          <%= link_to "My Profile", current_user %>
-        </li>
-        <li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        </li>
+  <header>
+    <nav>
+      <%= link_to "NEAT!", root_path %>
+      <% if current_user %>
+        <%= link_to "My Profile", current_user %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <% else %>
-          <li>
-            <%= link_to "Sign In", new_user_session_path %>
-          </li>
-          <li>
-            <%= link_to "Sign Up", new_user_registration_path %>
-          </li>
+        <%= link_to "Sign In", new_user_session_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
+    </nav>
+  </header>
+
+  <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
