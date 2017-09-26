@@ -1,12 +1,23 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: sans-serif;
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	position: absolute;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font: italic 34px Georgia;
+	-moz-transition:    all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition:     all .5s;
+	-o-transition:      all .5s;
+	transition:         all .5s;
 }
 
  nav {
@@ -28,30 +39,43 @@ html, body {
    background-color: aqua;
  }
 
- .panel {
- 		height: 100%;
- 		width: 100%;
- 	}
+.one   { left: 0     }
+.two   { left: -100% }
+.three { left: -200% }
+.four { left: -300% }
+.five { left: -400% }
 
-.one {
-  background-color: pink;
+.panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
-.two {
-  background-color: yellow;
+.pOne {
+	background: #c7f464;
 }
 
-.three {
-  background-color: red;
+.pTwo {
+	left: 100%;
+	background: #4ecdc4;
 }
 
-.four {
-  background-color: aqua;
+.pThree {
+	left: 200%;
+	background: #ff6b6b;
 }
 
-.five {
-  background-color: green;
+.pFour {
+  left: 300%;
+	background: #c7f464;
 }
+
+.pFive {
+	left: 400%;
+	background: #4ecdc4;
+}
+
+//**
 
 button {
  width: 100px;

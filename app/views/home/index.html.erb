@@ -1,48 +1,40 @@
+<section class="panel pOne">
+  <h2>Choose a meal:</h2>
+  <button class="btn">Breakfast</button>
+  <button class="btn">Lunch</button>
+  <button class="btn">Dinner</button>
+</section>
 
+<section class="panel pTwo">
+  <h2>Enter your main ingredient:</h2>
+  <input type="text" class="input" id="primaryIngr" placeholder="Enter" onblur="scrollto('three')">
+</section>
 
-  <section class="panel one">
-    <p class="p-one">
-      Choose a meal:
-      <br>
-      <button class="btn">Breakfast</button>
-      <button class="btn">Lunch</button>
-      <button class="btn">Dinner</button>
-    </p>
-  </section>
+<section class="panel pThree">
+  <p class="p-three">
+    Enter your secondary ingredient:
+    <br>
+    <input type="text" class="input" id="secIngr" placeholder="Enter" onblur="scrollto('four')">
+  </p>
+</section>
 
-  <section class="panel two">
-    <p class="p-two">
-      Enter your main ingredient:
-      <br>
-      <input type="text" class="input" id="main_ingr" placeholder="Enter">
-    </p>
-  </section>
+<section class="panel pFour">
+  <p class="p-four">
+    Enter a cuisine:
+    <br>
+    <input type="text" class="input" id="cuisine" placeholder="Enter" onblur="scrollto('five')">
+    <br>
 
-  <section class="panel three">
-    <p class="p-three">
-      Enter your secondary ingredient:
-      <br>
-      <input type="text" class="input" id="sec_ingr" placeholder="Enter">
-    </p>
-  </section>
+    <button id="end_btn">Submit</button>
+  </p>
+</section>
 
-  <section class="panel four">
-    <p class="p-four">
-      Enter a cuisine:
-      <br>
-      <input type="text" class="input" id="cuisine" placeholder="Enter">
-      <br>
+<section class="panel pFive">
+  <p class="recipe">
+    <h3 id="title"></h3>
+    <img id="img" src="#">
+    <ul id="list">
 
-      <button id="end_btn">Submit</button>
-    </p>
-  </section>
-
-  <section class="panel five">
-    <p class="recipe">
-      <h3 id="title"></h3>
-      <img id="img" src="#">
-      <ul id="list">
-
-      </ul>
-    </p>
-  </section>
+    </ul>
+  </p>
+</section>
