@@ -32,7 +32,7 @@ nav {
 nav a {
  display: inline-block;
  text-decoration: none;
- color: white;
+ color: #fff;
  padding-left: 20px;
  padding-right: 20px;
  padding-top: 16px;
@@ -44,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
- background-color: aqua;
+ background-color: #36C6D2;
 }
 
 .panel_container {
@@ -66,60 +66,69 @@ nav a:hover {
 }
 
 .pOne {
-	background: #c7f464;
+	background: #00292C;
 }
 
 .pTwo {
 	left: 100%;
-	background: #4ecdc4;
+	background: #014247;
 }
 
 .pThree {
 	left: 200%;
-	background: #ff6b6b;
+	background: #127E87;
 }
 
 .pFour {
   left: 300%;
-	background: #c7f464;
+	background: #014247;
 }
 
 .pFive {
 	left: 400%;
-	background: #4ecdc4;
+	background: #00292C;
 }
 
 .pg_content {
 	display: table-cell;
   vertical-align: middle;
+	color: #fff;
 }
 
 //**
 
 .btn {
-	width: 100px;
-	height: 50px;
+	color: #fff;
+	width: 150px;
+	height: 70px;
 	background-color: transparent;
-	border: 1px solid black;
+	border: 1px solid #fff;
 	outline: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: .5em;
+
 
 	&:hover {
 		background-color: aqua;
 		cursor: pointer;
+		font-style: italic;
 	}
 }
 
 
 #primaryIngr, #secIngr, #cuisine{
   background-color: transparent;
-  font-size: 20px;
+  font-size: .5em;
+	font-style: italic;
+	color: #fff;
   text-align: center;
   height: 25px;
   width: 250px;
   outline: none;
   padding: 5px;
   border: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #fff;
   // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -127,8 +136,18 @@ nav a:hover {
 	cursor: pointer;
 
 	&:hover {
-		color: white;
+		color: #36C6D2;
 	}
+}
+
+#selectCuisine {
+	outline: none;
+	height: 50px;
+	width: 400px;
+	background-color: transparent;
+	font-size: .5em;
+	color: white;
+	cursor: pointer;
 }
 
 .recipe_img {

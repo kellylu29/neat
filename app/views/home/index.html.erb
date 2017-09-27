@@ -18,8 +18,8 @@
   <div class="panel pTwo">
     <div class="pg_content">
       <h2>Enter your main ingredient:</h2>
-      <input type="text" id="primaryIngr" placeholder="Enter">
-      <br>
+      <input type="text" id="primaryIngr" placeholder="Ex. Chicken, Beef, Tofu">
+      <br><br>
       <span class="back_btn" onclick="scrollto('one')">Back</span>
     </div>
   </div>
@@ -27,20 +27,29 @@
   <div class="panel pThree">
     <div class="pg_content">
       <h2>Enter your secondary ingredient:</h2>
-      <input type="text" id="secIngr" placeholder="Enter">
-      <br>
+      <input type="text" id="secIngr" placeholder="Ex. Broccoli, Onion, Potato">
+      <br><br>
       <span class="back_btn" onclick="scrollto('two')">Back</span>
     </div>
   </div>
 
   <div class="panel pFour">
     <div class="pg_content">
-      <h2>Enter a cuisine:</h2>
-
-      <input type="text" class="input" id="cuisine" placeholder="Enter">
+      <h2>Choose a cuisine:</h2>
+      <form>
+        <select name="selectCuisine" id="selectCuisine">
+          <option disabled selected value>Select One</option>
+          <option class="cuisine" value="American">American</option>
+          <option class="cuisine" value="Asian">Asian</option>
+          <option class="cuisine" value="Italian">Italian</option>
+          <option class="cuisine" value="Spanish">Spanish</option>
+          <option value="Mediterranean">Mediterranean</option>
+          <option class="cuisine" value="French">French</option>
+        </select>
+      </form>
       <br>
       <button class="btn" id="end_btn">Submit</button>
-      <br>
+      <br><br>
       <span class="back_btn" onclick="scrollto('three')">Back</span>
     </div>
   </div>

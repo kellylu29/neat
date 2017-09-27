@@ -19,6 +19,7 @@ var currentRecipe = 0
 window.onload = function () {
 
 	var buttons = document.querySelectorAll('.btn')
+	var cuisines = document.querySelectorAll('.cuisine')
 
 	//function to get elements by ID
 	function id(str) {
@@ -28,6 +29,7 @@ window.onload = function () {
 	var primaryIngr = id('primaryIngr')
 	var secIngr 		= id('secIngr')
 	var cuisine 		= id('cuisine')
+	var selCuisine  = id('selectCuisine')
 	var endBtn 			= id('end_btn')
 
 	// Event Listeners
@@ -57,10 +59,16 @@ window.onload = function () {
 		}
   })
 
-	cuisine.addEventListener('blur', function(e){
-		state = Object.assign({}, state, { cuisine:
-			cuisine.value.toLowerCase()});
+	cuisines.forEach(function(cuisine) {
+    selCuisine.addEventListener('change', function(e){
+      state = Object.assign({}, state, { cuisine: this.value.toLowerCase()});
+    })
   })
+
+	// cuisine.addEventListener('click', function(e){
+	// 	state = Object.assign({}, state, { cuisine:
+	// 		cuisine.value.toLowerCase()});
+  // })
 
   endBtn.addEventListener('click', getRecipes)
 }

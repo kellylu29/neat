@@ -12,7 +12,7 @@
   <body>
     <header>
       <nav>
-        <%= link_to "NEAT!", root_path, :class => "logo" %>
+        <%= link_to image_tag("/images/neatlogo.png"), root_path, :class => "logo" %>
         <% if current_user %>
           <%= link_to "My Profile", current_user %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
