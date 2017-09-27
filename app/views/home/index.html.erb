@@ -3,9 +3,15 @@
   <div class="panel pOne">
     <div class="pg_content">
       <h2>Choose a meal:</h2>
-      <button class="btn">Breakfast</button>
-      <button class="btn">Lunch</button>
-      <button class="btn">Dinner</button>
+      <input type  = "button"
+             class = "btn"
+             value = "Breakfast">
+      <input type  = "button"
+             class = "btn"
+             value = "Lunch">
+      <input type  = "button"
+             class = "btn"
+             value = "Dinner">
     </div>
   </div>
 
@@ -33,21 +39,31 @@
 
       <input type="text" class="input" id="cuisine" placeholder="Enter">
       <br>
-      <span class="back_btn" onclick="scrollto('three')">Back</span>
+      <button class="btn" id="end_btn">Submit</button>
       <br>
-      <button id="end_btn">Submit</button>
+      <span class="back_btn" onclick="scrollto('three')">Back</span>
     </div>
   </div>
 
   <div class="panel pFive">
     <div class="pg_content">
-      <p class="recipe">
-        <h3 id="title"></h3>
+
+      <h3 id="title"></h3>
+
+      <div class="recipe_img">
         <img id="img" src="#">
+
+        <div class="recipe_btns">
+          <button class="btn">That's Neat!</button>
+        </div>
+      </div>
+
+      <div class="ing_list">
         <ul id="list">
 
         </ul>
-      </p>
+      </div>
+
     </div>
   </div>
 

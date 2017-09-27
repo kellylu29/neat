@@ -1,13 +1,19 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
-//= require_scrollmagic ./scrollmagic.js
+
 function scrollto(newclass) {
 	document.body.className = newclass;
 	return false;
 }
 
-var search = []
+var state = {
+  meal: '',
+  primaryIngr: '',
+  secIngr: '',
+	cuisine: ''
+}
+
 var currentRecipe = 0
 
 window.onload = function () {
@@ -27,8 +33,7 @@ window.onload = function () {
 	// Event Listeners
   buttons.forEach(function(button) {
     button.addEventListener('click', function(e){
-      search.push(button.innerHTML.toLowerCase())
-      e.target.disabled = 'true'
+      state = Object.assign({}, state, { meal: button.value.toLowerCase()});
 			scrollto('two')
     })
   })
@@ -36,7 +41,8 @@ window.onload = function () {
   primaryIngr.addEventListener('keypress', function(e){
 		var key = e.which || e.keyCode;
 		if (key === 13) {
-			search.push(primaryIngr.value.toLowerCase())
+			state = Object.assign({}, state, { primaryIngr:
+				primaryIngr.value.toLowerCase()});
 			scrollto('three')
 		}
 
@@ -45,13 +51,15 @@ window.onload = function () {
 	secIngr.addEventListener('keypress', function(e){
 		var key = e.which || e.keyCode;
 		if (key === 13) {
-			search.push(secIngr.value.toLowerCase())
+			state = Object.assign({}, state, { secIngr:
+				secIngr.value.toLowerCase()});
 			scrollto('four')
 		}
   })
 
 	cuisine.addEventListener('blur', function(e){
-    search.push(cuisine.value.toLowerCase())
+		state = Object.assign({}, state, { cuisine:
+			cuisine.value.toLowerCase()});
   })
 
   endBtn.addEventListener('click', getRecipes)
@@ -62,7 +70,7 @@ function getRecipes(){
 	var rImg = document.getElementById('img')
 	var ingList = document.getElementById('list')
 
-  var combinedSearch = search.join('+')
+  var combinedSearch = Object.keys(state).map(x => state[x]).join('+');
   $.ajax({
   	type: 'GET',
   	url: "https://api.edamam.com/search",

@@ -96,7 +96,7 @@ nav a:hover {
 
 //**
 
-button {
+.btn {
 	width: 100px;
 	height: 50px;
 	background-color: transparent;
@@ -131,10 +131,20 @@ button {
 	}
 }
 
-ul {
- padding: 0;
+.recipe_img {
+	float: left;
+	margin-left: 10%;
 }
 
-li {
- list-style-type: none;
+.ing_list {
+	float: left;
+	text-align: left;
+	margin-left: 10%;
+	font-size: .45em;
+	width: 40%;
+}
+
+#list {
+ padding: 0;
+
 }
