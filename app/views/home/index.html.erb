@@ -1,40 +1,54 @@
-<section class="panel pOne">
-  <h2>Choose a meal:</h2>
-  <button class="btn">Breakfast</button>
-  <button class="btn">Lunch</button>
-  <button class="btn">Dinner</button>
-</section>
+<div class="panel_container">
 
-<section class="panel pTwo">
-  <h2>Enter your main ingredient:</h2>
-  <input type="text" class="input" id="primaryIngr" placeholder="Enter" onblur="scrollto('three')">
-</section>
+  <div class="panel pOne">
+    <div class="pg_content">
+      <h2>Choose a meal:</h2>
+      <button class="btn">Breakfast</button>
+      <button class="btn">Lunch</button>
+      <button class="btn">Dinner</button>
+    </div>
+  </div>
 
-<section class="panel pThree">
-  <p class="p-three">
-    Enter your secondary ingredient:
-    <br>
-    <input type="text" class="input" id="secIngr" placeholder="Enter" onblur="scrollto('four')">
-  </p>
-</section>
+  <div class="panel pTwo">
+    <div class="pg_content">
+      <h2>Enter your main ingredient:</h2>
+      <input type="text" id="primaryIngr" placeholder="Enter">
+      <br>
+      <span class="back_btn" onclick="scrollto('one')">Back</span>
+    </div>
+  </div>
 
-<section class="panel pFour">
-  <p class="p-four">
-    Enter a cuisine:
-    <br>
-    <input type="text" class="input" id="cuisine" placeholder="Enter" onblur="scrollto('five')">
-    <br>
+  <div class="panel pThree">
+    <div class="pg_content">
+      <h2>Enter your secondary ingredient:</h2>
+      <input type="text" id="secIngr" placeholder="Enter">
+      <br>
+      <span class="back_btn" onclick="scrollto('two')">Back</span>
+    </div>
+  </div>
 
-    <button id="end_btn">Submit</button>
-  </p>
-</section>
+  <div class="panel pFour">
+    <div class="pg_content">
+      <h2>Enter a cuisine:</h2>
 
-<section class="panel pFive">
-  <p class="recipe">
-    <h3 id="title"></h3>
-    <img id="img" src="#">
-    <ul id="list">
+      <input type="text" class="input" id="cuisine" placeholder="Enter">
+      <br>
+      <span class="back_btn" onclick="scrollto('three')">Back</span>
+      <br>
+      <button id="end_btn">Submit</button>
+    </div>
+  </div>
 
-    </ul>
-  </p>
-</section>
+  <div class="panel pFive">
+    <div class="pg_content">
+      <p class="recipe">
+        <h3 id="title"></h3>
+        <img id="img" src="#">
+        <ul id="list">
+
+        </ul>
+      </p>
+    </div>
+  </div>
+
+</div>

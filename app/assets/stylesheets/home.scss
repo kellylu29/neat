@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
 	height: 100%;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 body {
@@ -12,40 +12,54 @@ body {
 	margin: 0;
 	width: 100%;
 	height: 100%;
-	font: italic 34px Georgia;
-	-moz-transition:    all .5s;
-	-webkit-transition: all .5s;
-	-ms-transition:     all .5s;
-	-o-transition:      all .5s;
-	transition:         all .5s;
+	-moz-transition:    all 1s;
+	-webkit-transition: all 1s;
+	-ms-transition:     all 1s;
+	-o-transition:      all 1s;
+	transition:         all 1s;
 }
 
- nav {
-  text-align: left;
-   width: 100%;
-   margin: 0;
- }
+nav {
+	font-family: sans-serif;
+	text-align: right;
+	width: 100%;
+	margin: 0;
+	position: fixed;
+	z-index: 1;
+	background-color: transparent;
+}
 
- nav a {
-   display: inline-block;
-   padding-left: 20px;
-   padding-right: 20px;
-   padding-top: 16px;
-   padding-bottom: 16px;
+nav a {
+ display: inline-block;
+ text-decoration: none;
+ color: white;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 16px;
+ padding-bottom: 16px;
+}
 
- }
+.logo {
+ float: left;
+}
 
- nav a:hover {
-   background-color: aqua;
- }
+nav a:hover {
+ background-color: aqua;
+}
+
+.panel_container {
+ text-align: center;
+ font: italic 34px sans-serif;
+}
 
 .one   { left: 0     }
 .two   { left: -100% }
 .three { left: -200% }
-.four { left: -300% }
-.five { left: -400% }
+.four  { left: -300% }
+.five  { left: -400% }
 
 .panel {
+	display: table;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -75,23 +89,28 @@ body {
 	background: #4ecdc4;
 }
 
+.pg_content {
+	display: table-cell;
+  vertical-align: middle;
+}
+
 //**
 
 button {
- width: 100px;
- height: 50px;
- background-color: transparent;
- border: 1px solid black;
- margin: 10px;
- outline: none;
+	width: 100px;
+	height: 50px;
+	background-color: transparent;
+	border: 1px solid black;
+	outline: none;
+
+	&:hover {
+		background-color: aqua;
+		cursor: pointer;
+	}
 }
 
-button:hover {
- background-color: aqua;
- cursor: pointer;
-}
 
-.input {
+#primaryIngr, #secIngr, #cuisine{
   background-color: transparent;
   font-size: 20px;
   text-align: center;
@@ -102,6 +121,14 @@ button:hover {
   border: none;
   border-bottom: 5px solid black;
   // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back_btn {
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+	}
 }
 
 ul {

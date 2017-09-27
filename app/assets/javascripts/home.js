@@ -13,18 +13,18 @@ var currentRecipe = 0
 window.onload = function () {
 
 	var buttons = document.querySelectorAll('.btn')
-	var inputs = document.querySelectorAll('.input')
 
-	//function to get HTML elements
+	//function to get elements by ID
 	function id(str) {
 		return document.getElementById(str)
 	}
 
 	var primaryIngr = id('primaryIngr')
-	var secIngr = id('secIngr')
-	var cuisine = id('cuisine')
-	var endBtn = id('end_btn')
+	var secIngr 		= id('secIngr')
+	var cuisine 		= id('cuisine')
+	var endBtn 			= id('end_btn')
 
+	// Event Listeners
   buttons.forEach(function(button) {
     button.addEventListener('click', function(e){
       search.push(button.innerHTML.toLowerCase())
@@ -33,14 +33,21 @@ window.onload = function () {
     })
   })
 
-  primaryIngr.addEventListener('blur', function(e){
-    search.push(primaryIngr.value.toLowerCase())
-		scrollto('three')
+  primaryIngr.addEventListener('keypress', function(e){
+		var key = e.which || e.keyCode;
+		if (key === 13) {
+			search.push(primaryIngr.value.toLowerCase())
+			scrollto('three')
+		}
+
   })
 
-	secIngr.addEventListener('blur', function(e){
-    search.push(secIngr.value.toLowerCase())
-		scrollto('four')
+	secIngr.addEventListener('keypress', function(e){
+		var key = e.which || e.keyCode;
+		if (key === 13) {
+			search.push(secIngr.value.toLowerCase())
+			scrollto('four')
+		}
   })
 
 	cuisine.addEventListener('blur', function(e){
