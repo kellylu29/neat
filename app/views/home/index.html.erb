@@ -63,7 +63,17 @@
         <img id="img" src="#">
 
         <div class="recipe_btns">
-          <button class="btn">That's Neat!</button>
+          <% if current_user %>
+            <%= form_for @recipe do |f| %>
+              <%= f.hidden_field :user_id, value: current_user.id %>
+              <%= f.hidden_field :title %>
+              <%= f.hidden_field :ingredients %>
+              <%= f.hidden_field :src %>
+
+              <%= f.submit "That's Neat!", :class => 'btn'%>
+            <% end %>
+          <% end %>
+
           <button class="btn" onclick="refreshPage()">Start Over</button>
         </div>
       </div>

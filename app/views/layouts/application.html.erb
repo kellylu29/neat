@@ -14,7 +14,7 @@
       <nav>
         <%= link_to image_tag("/images/neatlogo.png"), root_path, :class => "logo" %>
         <% if current_user %>
-          <%= link_to "My Profile", current_user %>
+          <%= link_to "My Recipes", current_user %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to "Sign In", new_user_session_path %>
@@ -22,6 +22,12 @@
         <% end %>
       </nav>
     </header>
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
     <%= yield %>
   </body>
 </html>

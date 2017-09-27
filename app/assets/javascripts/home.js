@@ -9,7 +9,7 @@ function scrollto(newclass) {
 
 function refreshPage(){
     window.location.reload();
-} 
+}
 
 var state = {
   meal: '',
@@ -69,11 +69,6 @@ window.onload = function () {
     })
   })
 
-	// cuisine.addEventListener('click', function(e){
-	// 	state = Object.assign({}, state, { cuisine:
-	// 		cuisine.value.toLowerCase()});
-  // })
-
   endBtn.addEventListener('click', getRecipes)
 }
 
@@ -98,16 +93,16 @@ function getRecipes(){
       var recipe = recipes[currentRecipe].recipe;
       var title = recipe.label;
       var image_url = recipe.image;
-      var ingredients = recipe.ingredients;
+      var ingredients = recipe.ingredientLines;
+			var f = document.forms[1]
 
-      for(var j = 0; j < ingredients.length; j++){
-        var ingredient = ingredients[j].text;
-        var list = "<li>" + ingredient + "</li>"
-        ingList.innerHTML += list;
-      }
+			rTitle.innerHTML = title;
+			rImg.src = image_url;
+			ingList.innerHTML = ingredients.join("<br>")
 
-      rTitle.innerHTML = title;
-      rImg.src = image_url;
+			f['recipe[title]'].value = title;
+			f['recipe[ingredients]'].value = ingredients.join("<br>")
+			f['recipe[src]'].value = image_url
     }
   })
 	scrollto('five')

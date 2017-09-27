@@ -19,6 +19,7 @@ body {
 	transition:         all 1s;
 }
 
+//Nav bar styling
 nav {
 	font-family: sans-serif;
 	text-align: right;
@@ -47,6 +48,7 @@ nav a:hover {
  background-color: #36C6D2;
 }
 
+//Panels styling
 .panel_container {
  text-align: center;
  font: italic 34px sans-serif;
@@ -95,8 +97,7 @@ nav a:hover {
 	color: #fff;
 }
 
-//**
-
+// Buttons styling
 .btn {
 	color: #fff;
 	width: 150px;
@@ -115,7 +116,15 @@ nav a:hover {
 	}
 }
 
+.back_btn {
+	cursor: pointer;
 
+	&:hover {
+		color: #36C6D2;
+	}
+}
+
+// Input styling
 #primaryIngr, #secIngr, #cuisine{
   background-color: transparent;
   font-size: .5em;
@@ -131,14 +140,6 @@ nav a:hover {
   // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.back_btn {
-	cursor: pointer;
-
-	&:hover {
-		color: #36C6D2;
-	}
-}
-
 #selectCuisine {
 	outline: none;
 	height: 50px;
@@ -149,6 +150,7 @@ nav a:hover {
 	cursor: pointer;
 }
 
+// Recipe panel styling
 .recipe_img {
 	float: left;
 	margin-left: 10%;

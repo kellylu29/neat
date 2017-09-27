@@ -1,3 +1,16 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  font-family: sans-serif;
+	height: 100%;
+	overflow: scroll;
+  background: #00292C;
+}
+
+.my_recipes {
+  width: 75%;
+  color: #fff;
+  text-align: center;
+  margin: 100px auto;
+}
