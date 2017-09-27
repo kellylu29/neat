@@ -1,4 +1,9 @@
 
 <div class="my_recipes">
   <h2>My Recipes</h2>
+
+  <% @recipes.each do |recipe| %>
+    <p><strong>Title:</strong> <%= recipe.title %> </p>
+    <%= link_to image_tag(recipe.src), recipe.url %>
+  <% end %>
 </div>
