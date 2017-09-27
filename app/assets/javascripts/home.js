@@ -7,6 +7,10 @@ function scrollto(newclass) {
 	return false;
 }
 
+function refreshPage(){
+    window.location.reload();
+} 
+
 var state = {
   meal: '',
   primaryIngr: '',
