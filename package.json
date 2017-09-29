@@ -1,5 +1,7 @@
 {
   "name": "final_proj",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "typed.js": "^2.0.6"
+  }
 }

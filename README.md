@@ -1,24 +1,17 @@
-# README
+# NEAT!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Neat is a web application for finding a random recipe based on user inputs and selections. User has the ability to save a recipe for future reference.
 
-Things you may want to cover:
+Technology:
 
-* Ruby version
+* Ruby (version 2.4.1)
 
-* System dependencies
+* Javascript
 
-* Configuration
+Gems:
 
-* Database creation
+* Devise
 
-* Database initialization
+APIs:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Edamam
