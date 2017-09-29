@@ -44,19 +44,26 @@ nav a {
  border-radius: 10px;
 }
 
-.logo {
- float: left;
+nav a:hover {
+ background-color: #F98B60;
 }
 
-nav a:hover {
- background-color: #F08A5D;
+.logo {
+	float: left;
+	background-color: #F98B60;
+
+	&:hover {
+		color: #F98B60;
+		background-color: #fff;
+		border: 1px solid #F98B60;
+	}
 }
 
 //Panels styling
 .panel_container {
- text-align: center;
- font: 2em 'Corben';
- text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.10);
+	text-align: center;
+	font: 2em 'Corben';
+	text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.10);
 }
 
 .one   { left: 0     }
@@ -128,7 +135,7 @@ nav a:hover {
 	font-family: 'Raleway';
 
 	&:hover {
-		background-color: #F08A5D;
+		background-color: #F98B60;
 		cursor: pointer;
 		font-style: italic;
 	}
@@ -138,8 +145,13 @@ nav a:hover {
 	cursor: pointer;
 
 	&:hover {
-		color: #F08A5D;
+		font-style: italic;
 	}
+}
+
+#end_btn {
+	width: 150px;
+	height: 50px;
 }
 
 // Input styling
@@ -162,11 +174,14 @@ nav a:hover {
 
 #selectCuisine {
 	outline: none;
+	font-family: 'Raleway';
 	height: 50px;
 	width: 400px;
 	background-color: transparent;
 	font-size: .5em;
 	color: white;
+	border: 2px solid #fff;
+	border-radius: 10px;
 	cursor: pointer;
 }
 
@@ -181,17 +196,42 @@ nav a:hover {
 .recipe_img {
 	float: left;
 	margin-left: 10%;
+	width: 31%;
+}
+
+#img{
+	border-radius: 10px;
+	border: 1px solid #fff;
 }
 
 .ing_list {
+	font-family: 'Raleway';
 	float: left;
 	text-align: left;
-	margin-left: 10%;
 	font-size: .45em;
 	width: 40%;
+	border: 1px solid #fff;
+	height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+	overflow: scroll;
 }
 
 #list {
  padding: 0;
+
+}
+
+.recipe_btns {
+	width: 50%;
+	display: inline-block;
+}
+
+.recipe_save, .recipe_refresh {
+	width: 150px;
+	height: 50px;
+	font-size: .5em;
+	display: inline-block;
 
 }

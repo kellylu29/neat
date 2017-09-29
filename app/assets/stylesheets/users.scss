@@ -16,6 +16,10 @@ html {
   margin: 100px auto;
 }
 
+.recipes_head {
+  font: 2em 'Corben';
+}
+
 .recipes_wrapper {
   width: 90%;
   height: 100%;
@@ -26,17 +30,24 @@ html {
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-sizing: border-box;
   width: 300px;
   height: 300px;
   border: 1px solid #fff;
+  border-radius: 10px;
   margin: auto 10px;
-  // display: table;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.10);
   display: inline-block;
+  position: relative;
+  -webkit-filter: saturate(150%);
+  filter: saturate(150%);
 }
 
 .title {
-  display: table-cell;
-  vertical-align: bottom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   a {
     text-decoration: none;
@@ -44,7 +55,19 @@ html {
     font-size: 1.25em;
 
     &:hover {
-      background-color: #36C6D2;
+      background-color: #F98B60;
     }
   }
+}
+
+//User sign in and sign up forms
+.user_sign {
+  width: 100%;
+}
+.new_user {
+  width: 30%;
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
 }

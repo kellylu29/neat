@@ -1,12 +1,12 @@
 
 <div class="container">
-  <h2>My Recipes</h2>
+  <h2 class="recipes_head">My Recipes</h2>
 
   <div class="recipes_wrapper">
     <% @recipes.each do |recipe| %>
-      <div class="recipe" style='background-image: url("<%= recipe.src %>")'>
+      <div class="recipe animated pulse" style='background-image: url("<%= recipe.src %>")'>
 
-        <p class="title"><%= link_to recipe.title, recipe.url %></p>
+        <div class="title"><%= link_to recipe.title, recipe.url %></div>
       </div>
     <% end %>
   </div>

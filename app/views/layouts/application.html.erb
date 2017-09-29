@@ -3,6 +3,8 @@
   <head>
     <title>NEAT!</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -12,7 +14,7 @@
   <body>
     <header>
       <nav>
-        <%= link_to image_tag("/images/neatlogo.png"), root_path, :class => "logo" %>
+        <%= link_to "Neat!", root_path, :class => "logo" %>
         <% if current_user %>
           <%= link_to "My Recipes", current_user %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
