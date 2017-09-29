@@ -55,7 +55,7 @@ window.onload = function () {
   buttons.forEach(function(button) {
     button.addEventListener('click', function(e){
       state = Object.assign({}, state, { meal: button.value.toLowerCase()});
-			scrollto('two')
+			scrollto('two');
     })
   })
 
@@ -64,7 +64,7 @@ window.onload = function () {
 		if (key === 13) {
 			state = Object.assign({}, state, { primaryIngr:
 				primaryIngr.value.toLowerCase()});
-			scrollto('three')
+			scrollto('three');
 		}
 
   })
@@ -74,7 +74,7 @@ window.onload = function () {
 		if (key === 13) {
 			state = Object.assign({}, state, { secIngr:
 				secIngr.value.toLowerCase()});
-			scrollto('four')
+			scrollto('four');
 		}
   })
 
@@ -84,7 +84,7 @@ window.onload = function () {
     })
   })
 
-  endBtn.addEventListener('click', getRecipes)
+  endBtn.addEventListener('click', getRecipes);
 
 }
 
