@@ -196,15 +196,17 @@ nav a:hover {
 .recipe_img {
 	float: left;
 	margin-left: 10%;
-	width: 31%;
+	width: 33%;
 }
 
 #img{
 	border-radius: 10px;
 	border: 1px solid #fff;
+	-webkit-filter: saturate(150%);
+  filter: saturate(150%);
 }
 
-.ing_list {
+#ing_list {
 	font-family: 'Raleway';
 	float: left;
 	text-align: left;
@@ -223,10 +225,14 @@ nav a:hover {
 
 }
 
-.recipe_btns {
+#recipe_btns {
 	width: 50%;
 	display: inline-block;
 }
+
+// .hidden {
+// 	display: none;
+// }
 
 .recipe_save, .recipe_refresh {
 	width: 150px;

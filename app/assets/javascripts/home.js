@@ -89,9 +89,9 @@ window.onload = function () {
 }
 
 function getRecipes(){
-	var rTitle = document.getElementById('title')
-	var rImg = document.getElementById('img')
-	var ingList = document.getElementById('list')
+	var rTitle = document.getElementById('title');
+	var rImg = document.getElementById('img');
+	var list = document.getElementById('list');
 
   var combinedSearch = Object.keys(state).map(x => state[x]).join('+');
   $.ajax({
@@ -111,16 +111,22 @@ function getRecipes(){
       var image_url = recipe.image;
       var ingredients = recipe.ingredientLines;
 			var url = recipe.url;
-			var f = document.forms[1]
+			var f = document.forms[1];
 
 			rTitle.innerHTML = title;
 			rImg.src = image_url;
-			ingList.innerHTML = ingredients.join("<br>");
+			list.innerHTML = ingredients.join("<br>");
 
 			f['recipe[title]'].value = title;
 			f['recipe[url]'].value = url;
 			f['recipe[src]'].value = image_url;
+
     }
   })
-	scrollto('five')
+	scrollto('five');
 }
+
+// var ingList = document.getElementById('ing_List');
+// var recipeBtns = document.getElementById('recipe_btns')
+// ingList.classList.remove("hidden");
+// recipeBtns.classList.remove("hidden");

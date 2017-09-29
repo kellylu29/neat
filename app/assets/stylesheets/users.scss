@@ -41,6 +41,7 @@ html {
   position: relative;
   -webkit-filter: saturate(150%);
   filter: saturate(150%);
+  margin: 10px;
 }
 
 .title {
@@ -61,13 +62,52 @@ html {
 }
 
 //User sign in and sign up forms
+
 .user_sign {
-  width: 100%;
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      font-style: italic;
+    }
+  }
 }
+
+.user_head {
+  font-family: 'Corben';
+  color: #25A55F;
+}
+
 .new_user {
-  width: 30%;
-  border: 1px solid #fff;
+  box-sizing: border-box;
+  padding: 25px;
+  width: 70%;
+  height: 300px;
+  border: 2px solid #fff;
+  border-radius: 10px;
   color: #fff;
   margin: 0 auto;
   text-align: center;
+  line-height: 150%;
+
+  .field input {
+    outline: none;
+    width: 150px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-family: 'Raleway';
+    font-size: .85em;
+  }
+}
+
+.userbtn {
+  width: 150px;
+  height: 35px;
+  font-size: 1em;
 }

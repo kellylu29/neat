@@ -5,7 +5,7 @@
       <h2>Find something
         <a class="typewrite"
            data-period="2000"
-           data-type='[ "Neat", "Cool", "Gnarly", "Suhweet", "Awesome" ]'
+           data-type='[ "Neat", "Rad", "Cool", "Shweet", "Awesome" ]'
            style="text-decoration: none; cursor: none">
            <span class="wrap"></span>
         </a> to eat for:</h2>
@@ -67,7 +67,7 @@
 
         <div class="recipe_img">
           <img id="img" src="#">
-          <div class="recipe_btns">
+          <div id="recipe_btns" class="hidden">
             <% if current_user %>
               <%= form_for @recipe do |f| %>
                 <%= f.hidden_field :user_id, value: current_user.id %>
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-      <div class="ing_list">
+      <div id="ing_list" class="hidden">
         <ul id="list">
 
         </ul>
