@@ -1,6 +1,8 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Corben:700|Raleway:700');
+
 html {
 	height: 100%;
 	overflow: scroll;
@@ -21,7 +23,7 @@ body {
 
 //Nav bar styling
 nav {
-	font-family: sans-serif;
+	font-family: 'Raleway';
 	text-align: right;
 	width: 100%;
 	margin: 0;
@@ -36,8 +38,10 @@ nav a {
  color: #fff;
  padding-left: 20px;
  padding-right: 20px;
- padding-top: 16px;
+ padding-top: 15px;
+ margin: 5px;
  padding-bottom: 16px;
+ border-radius: 10px;
 }
 
 .logo {
@@ -45,13 +49,14 @@ nav a {
 }
 
 nav a:hover {
- background-color: #36C6D2;
+ background-color: #F08A5D;
 }
 
 //Panels styling
 .panel_container {
  text-align: center;
- font: italic 34px sans-serif;
+ font: 2em 'Corben';
+ text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.10);
 }
 
 .one   { left: 0     }
@@ -68,27 +73,27 @@ nav a:hover {
 }
 
 .pOne {
-	background: #00292C;
+	background: #FFC000;
 }
 
 .pTwo {
 	left: 100%;
-	background: #014247;
+	background: #FFAE00;
 }
 
 .pThree {
 	left: 200%;
-	background: #127E87;
+	background: #F09A00;
 }
 
 .pFour {
   left: 300%;
-	background: #014247;
+	background: #FFAE00;
 }
 
 .pFive {
 	left: 400%;
-	background: #00292C;
+	background: #FFC000;
 }
 
 .pg_content {
@@ -97,20 +102,33 @@ nav a:hover {
 	color: #fff;
 }
 
+//Spans
+.wrap {
+	color: #25A55F;
+	font-size: 1.25em;
+}
+
+.small {
+	font-size: .5em;
+	font-family: 'Raleway';
+}
+
 // Buttons styling
 .btn {
 	color: #fff;
-	width: 150px;
-	height: 70px;
+	width: 200px;
+	height: 100px;
 	background-color: transparent;
-	border: 1px solid #fff;
+	border: 2px solid #fff;
+	border-radius: 10px;
 	outline: none;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: .5em;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: .75em;
+	font-family: 'Raleway';
 
 	&:hover {
-		background-color: aqua;
+		background-color: #F08A5D;
 		cursor: pointer;
 		font-style: italic;
 	}
@@ -120,20 +138,22 @@ nav a:hover {
 	cursor: pointer;
 
 	&:hover {
-		color: #36C6D2;
+		color: #F08A5D;
 	}
 }
 
 // Input styling
 #primaryIngr, #secIngr, #cuisine{
   background-color: transparent;
-  font-size: .5em;
+	font-family: 'Raleway';
+  font-size: 1em;
 	font-style: italic;
 	color: #fff;
   text-align: center;
-  height: 25px;
-  width: 250px;
+  height: 50px;
+  width: 400px;
   outline: none;
+	box-sizing: border-box;
   padding: 5px;
   border: none;
   border-bottom: 5px solid #fff;
@@ -148,6 +168,13 @@ nav a:hover {
 	font-size: .5em;
 	color: white;
 	cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+::-moz-placeholder {
+  color: #fff;
 }
 
 // Recipe panel styling
