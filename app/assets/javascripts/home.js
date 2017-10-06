@@ -93,7 +93,10 @@ function getRecipes(){
 	var rImg = document.getElementById('img');
 	var list = document.getElementById('list');
 
-  var combinedSearch = Object.keys(state).map(x => state[x]).join('+');
+  var combinedSearch = Object.keys(state).map(function (x){
+  	return state[x];
+	}).join('+');
+	
   $.ajax({
   	type: 'GET',
   	url: "https://api.edamam.com/search",
