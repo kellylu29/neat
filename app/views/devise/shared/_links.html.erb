@@ -1,6 +1,6 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
-<% end -%>
+<!-- <%- if controller_name != 'sessions' %>
+  <%= link_to "Sign in", new_session_path(resource_name) %><br />
+<% end -%> -->
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
@@ -20,6 +20,6 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+    <%= link_to image_tag("/images/google.png", width: 200), user_google_oauth2_omniauth_authorize_path %>
   <% end -%>
 <% end -%>
