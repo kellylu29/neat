@@ -9,10 +9,9 @@ View Live: http://thatsneat.herokuapp.com/
 * Password: password
 
 Technology
-<hr>
+---
 
 * Ruby (version 2.4.1)
-
 * Javascript
 
 #### Gems:
