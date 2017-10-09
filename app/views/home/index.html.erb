@@ -5,7 +5,7 @@
       <h2>Find something
         <a class="typewrite"
            data-period="2000"
-           data-type='[ "Neat", "Rad", "Cool", "Shweet", "Awesome" ]'
+           data-type='[ "Neat", "Rad", "Amazing", "Cool", "Awesome" ]'
            style="text-decoration: none; cursor: none">
            <span class="wrap"></span>
         </a> to eat for:</h2>
@@ -75,21 +75,19 @@
                 <%= f.hidden_field :src %>
                 <%= f.hidden_field :url %>
 
-                <%= f.submit "That's Neat!", :class => 'btn recipe_save'%>
+                <%= f.submit "That's Neat!", :class => 'btn recipe_save hidden', :id => 'neat_btn'%>
               <% end %>
             <% end %>
 
             <input type    = "button"
-                   class   = "btn recipe_refresh"
+                   id      = "start_over"
+                   class   = "btn recipe_refresh hidden"
                    onclick = "refreshPage()"
-                   value   = "Start Over">
+                   value   = "Start Over" >
           </div>
         </div>
 
-      <div id="ing_list" class="hidden">
-        <ul id="list">
-
-        </ul>
+      <div id="ing_list">
       </div>
 
     </div>

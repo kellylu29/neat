@@ -212,17 +212,18 @@ nav a:hover {
 	text-align: left;
 	font-size: .45em;
 	width: 40%;
-	border: 1px solid #fff;
 	height: 300px;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-	overflow: scroll;
 }
 
 #list {
- padding: 0;
-
+	margin: 0;
+	padding: 20px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	box-sizing: border-box;
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
 }
 
 #recipe_btns {
@@ -230,14 +231,13 @@ nav a:hover {
 	display: inline-block;
 }
 
-// .hidden {
-// 	display: none;
-// }
-
 .recipe_save, .recipe_refresh {
 	width: 150px;
 	height: 50px;
 	font-size: .5em;
 	display: inline-block;
+}
 
+.hidden {
+	display: none;
 }

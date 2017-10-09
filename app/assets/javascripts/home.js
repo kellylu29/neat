@@ -91,12 +91,14 @@ window.onload = function () {
 function getRecipes(){
 	var rTitle = document.getElementById('title');
 	var rImg = document.getElementById('img');
-	var list = document.getElementById('list');
+	var list = document.getElementById('ing_list');
+	var startOverBtn = document.getElementById('start_over');
+	var neatBtn = document.getElementById('neat_btn');
 
   var combinedSearch = Object.keys(state).map(function (x){
   	return state[x];
 	}).join('+');
-	
+
   $.ajax({
   	type: 'GET',
   	url: "https://api.edamam.com/search",
@@ -118,7 +120,9 @@ function getRecipes(){
 
 			rTitle.innerHTML = title;
 			rImg.src = image_url;
-			list.innerHTML = ingredients.join("<br>");
+			list.innerHTML = "<ul id='list'>"+ingredients.join("<br>")+"</ul>";
+			startOverBtn.classList.remove("hidden");
+			neatBtn.classList.remove("hidden");
 
 			f['recipe[title]'].value = title;
 			f['recipe[url]'].value = url;
