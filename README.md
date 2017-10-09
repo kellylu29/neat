@@ -11,8 +11,9 @@ View Live: http://thatsneat.herokuapp.com/
 Technology
 ---
 
-* Ruby (version 2.4.1)
-* Javascript
+* Ruby (version 2.4.1) on Rails
+* JavaScript
+* Database: SQLite 3 in development and PostgreSQL in production
 
 #### Gems:
 
