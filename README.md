@@ -1,17 +1,26 @@
 # NEAT!
 
-Neat is a web application for finding a random recipe based on user inputs and selections. User has the ability to save a recipe for future reference.
+A fun app that takes the boredom and frustration out of deciding what to eat without wasting the food that is already in one’s fridge.
 
-Technology:
+View Live: http://thatsneat.herokuapp.com/
+
+#### Demo: 
+* Email: demo@thatsneat.com
+* Password: password
+
+Technology
+<hr>
 
 * Ruby (version 2.4.1)
 
 * Javascript
 
-Gems:
+#### Gems:
 
-* Devise
+* devise
+* omniauth-google-oauth2
 
-APIs:
+#### APIs:
 
 * Edamam
+* Google Oauth 2
