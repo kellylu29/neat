@@ -6,7 +6,7 @@
     <% @recipes.each do |recipe| %>
       <div class="recipe animated pulse" style='background-image: url("<%= recipe.src %>")'>
 
-        <div class="title"><%= link_to recipe.title, recipe.url %>
+        <div class="title"><%= link_to recipe.title, recipe.url, target: "_blank" %>
           <br>
           <br>
           <%= link_to 'Delete', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'link' %>
